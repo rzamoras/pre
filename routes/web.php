@@ -13,13 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/', function () {
-//     return view('pages.index');
-// });
 Route::get('/index', 'PagesController@index')->name('dashboard');
 
 
@@ -66,3 +59,5 @@ Route::get('/sms', 'PagesController@sms')->name('messages.sms');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/cashier', 'CashierController@index')->name('cashier.home');
+Route::get('/library', 'LibraryController@index')->name('library.home');
