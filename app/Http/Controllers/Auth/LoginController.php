@@ -30,15 +30,15 @@ class LoginController extends Controller
     // protected $redirectTo = RouteServiceProvider::HOME;
     protected $redirectTo = '/index';
 
-    // protected function authenticated(Request $request, $user)
-    // {
-    //     if($user->hasRole('user')){
-    //         return redirect('cashiering.fees');
-    //     }
-    //     if($user->hasRole('user')){
-    //         return redirect('library.home');
-    //     }
-    // }
+    protected function authenticated(Request $request, $user)
+    {
+        if($user->hasRole('user')){
+            return redirect('cashiering.fees');
+        }
+        if($user->hasRole('user')){
+            return redirect('library.home');
+        }
+    }
 
     /**
      * Create a new controller instance.
