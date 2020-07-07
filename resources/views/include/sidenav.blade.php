@@ -52,8 +52,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item has-treeview {{ request()->is('soa', 'studentAccount.studentList', 'subsidiary', 'summary')? 'active menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('soa', 'studentAccount.studentList', 'subsidiary', 'summary')? 'active' : '' }}">
+                <li class="nav-item has-treeview {{ request()->is('soa', 'studentList', 'subsidiary', 'summary')? 'active menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('soa', 'studentList', 'subsidiary', 'summary')? 'active' : '' }}">
                         <i class="nav-icon fas fa-file-invoice-dollar w3-text-red"></i>
                         <p>
                             Student Account
@@ -68,8 +68,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('studentList') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon {{ request()->is('studentAccount.studentList') ? 'w3-text-blue' : '' }}"></i>
+                            <a href="{{ route('studentAccount.studentList') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon {{ request()->is('studentList') ? 'w3-text-blue' : '' }}"></i>
                                 <p>Student list</p>
                             </a>
                         </li>
