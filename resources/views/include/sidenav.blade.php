@@ -68,7 +68,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('studentAccount.studentList') }}" class="nav-link">
+                            <a href="{{ route('studentList') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon {{ request()->is('studentAccount.studentList') ? 'w3-text-blue' : '' }}"></i>
                                 <p>Student list</p>
                             </a>
