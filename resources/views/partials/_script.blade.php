@@ -34,4 +34,17 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset("public/bower_components/admin-lte/dist/js/demo.js") }}"></script>
 
+<script src="{{ asset("public/dist/js/adminlte.min.js") }}"></script>
+<script src="{{ asset("public/dist/js/demo.js") }}"></script>
+<script src="{{ asset("public/bower_components/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js") }}"></script>
+
+<!-- datatabales -->
+<script src="{{ asset("public/bower_components/admin-lte/plugins/jquery/jquery.min.js") }}"></script>
+<script src="{{ asset("public/bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js") }}"></script>
+<script src="{{ asset("public/bower_components/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js") }}"></script>
+<script src="{{ asset("public/bower_components/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js") }}"></script>
+<script src="{{ asset("public/bower_components/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js") }}"></script>
+
 {{-- <script src="{{ asset("fontawesome/js/all.js") }}"></script> --}}
+{{-- <script src="{{ asset("public/bower_components/datatables/dataTables.bootstrap.js") }}"></script>
+<script src="{{ asset("public/bower_components/datatables/dataTables.bootstrap.min.css") }}"></script> --}}

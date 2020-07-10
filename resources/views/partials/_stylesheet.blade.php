@@ -1,6 +1,6 @@
 <link rel="icon" href="{{ asset("public/img/sicc_logo.png") }}">
 <!-- Font Awesome Icons -->
-<link rel="stylesheet" href="{{ asset("public/bower_components/admin-lte/fontawesome-free/css/all.css") }}">
+<link rel="stylesheet" href="{{ asset("public/bower_components/admin-lte/plugins/fontawesome-free/css/all.css") }}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset("public/bower_components/admin-lte/dist/css/adminlte.min.css") }}">
 <link rel="stylesheet" href="{{ asset("public/bower_components/admin-lte/plugins/fontawesome-free/css/all.min.css") }}">
@@ -25,3 +25,7 @@
 <link rel="stylesheet" href="{{ asset("public/dist/css/w3.css") }}"
 <!-- Google Font: Source Sans Pro -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+<!-- datatables -->
+<link rel="stylesheet" href="{{ asset("public/bower_components/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css") }}">
+<link rel="stylesheet" href="{{ asset("public/bower_components/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css") }}">

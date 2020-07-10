@@ -28,7 +28,7 @@ Route::get('/registration', 'PagesController@registration')->name('cashiering.re
 
 //Student of Account
 Route::get('/soa', 'PagesController@soa')->name('studentAccount.soa');
-Route::get('/studentList', 'PagesController@studentList')->name('studentAccount.studentList');
+//Route::get('/studentList', 'PagesController@studentList')->name('studentAccount.studentList');
 Route::get('/subsidiary', 'PagesController@subsidiary')->name('studentAccount.subsidiary');
 Route::get('/summary', 'PagesController@summary')->name('studentAccount.summary');
 
@@ -66,3 +66,5 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PagesController@index')->name('dashboard');
+
+Route::get('/studentList', 'StudentsController@index')->name('studentAccount.list');
