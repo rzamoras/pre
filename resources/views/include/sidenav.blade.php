@@ -69,9 +69,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('studentAccount.studentList') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon {{ request()->is('studentList') ? 'w3-text-blue' : '' }}"></i>
-: '' }}"></i>
-        </a>
+                                <i class="far fa-circle nav-icon {{ request()->is('studentList') ? 'w3-text-blue' : '' }}"></i>List</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('studentAccount.subsidiary') }}" class="nav-link">
