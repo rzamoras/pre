@@ -3,7 +3,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-
 @section('content')
 <div class="content-wrapper">
     <!-- Main content -->
@@ -12,14 +11,14 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body w3-mobile w3-responsive">
                             <table id="example2" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>ACTION</th>
-                                <th>STUDENT ID</th>
-                                <th>NAME</th>
-                                <th>COURSE</th>
+                                <th class="text-center">ACTION</th>
+                                <th class="text-center">STUDENT ID</th>
+                                <th class="text-center">NAME</th>
+                                <th class="text-center">COURSE</th>
                                 <th>CONTACT</th>
                             </tr>
                             </thead>
@@ -27,8 +26,8 @@
                                 @foreach($data as $student)
                                     <tr>
                                         <td> </td>
-                                        <td>{{ $student->StudId }}</td>
-                                        <td>{{ $student->studLast }}</td>
+                                        <td class="text-center">{{ $student->StudId }}</td>
+                                        <td>{{ $student->studLast }},&nbsp;{{$student->studFirst}}&nbsp;<small>{{ $student->studMid }}</small></td>
                                         <td>{{ $student->course }}</td>
                                         <td>{{ $student->studContact }}</td>
                                     </tr>
@@ -38,8 +37,8 @@
                             <tr>
                                 <th>ACTION</th>
                                 <th>STUDENT ID</th>
-                                <th>NAME</th>
-                                <th>COURSE</th>
+                                <th class="text-center">NAME</th>
+                                <th class="text-center">COURSE</th>
                                 <th>CONTACT</th>
                             </tr>
                             </tfoot>
@@ -114,19 +113,6 @@
  --}}
 @endsection
 
-{{-- <script>
-    $(function() {
-        $('#example1').DataTable()
-        $('#example2').DataTable({
-            'paging': true,
-            'lengthChange': false,
-            'searching': false,
-            'ordering': true,
-            'info': true,
-            'autoWidth': false
-        })
-    })
-</script> --}}
 <script>
     $(function () {
         $("#example1").DataTable({
