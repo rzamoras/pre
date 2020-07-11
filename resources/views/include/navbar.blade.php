@@ -1,3 +1,75 @@
+
+<div id="addUser" class="w3-modal">
+    <div class="w3-card w3-modal-content  w3-animate-top w3-round">
+        <header class="w3-container w3-light-blue">
+            <span onclick="document.getElementById('addUser').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span><br>
+            <div class="text-center"><p>ADD USER</p></div>
+        </header>
+
+<form method="POST" action="{{ route('register') }}">
+    @csrf
+
+    <div class="w3-section w3-padding w3-col">
+
+        <label for="name" class="">{{ __('Name') }}</label>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+            @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
+        <label for="email" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
+        <label for="username" class="col-form-label text-md-right">{{ __('Username') }}</label>
+
+            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
+
+            @error('username')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
+        <label for="password" class="col-form-label text-md-right">{{ __('Password') }}</label>
+
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
+        <label for="password-confirm" class="col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+
+    <div class="w3-padding">
+        <div class="">
+            <button type="submit" class="btn btn-primary">
+                {{ __('Register') }}
+            </button>
+        </div>
+    </div>
+    </div>
+</form>
+        <footer class="w3-container">
+
+        </footer>
+    </div>
+</div>
+
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -27,7 +99,7 @@
                 <!-- Menu Body -->
                 <li class="user-body w3-small">
                     <div class="row">
-                        <button class="col-4 btn btn-default btn-flat"><i
+                        <button class="col-4 btn btn-default btn-flat" onclick="document.getElementById('addUser').style.display='block'"><i
                                 class="fas fa-plus-circle"></i>&nbsp;User</button>
                         <button class="col-4 btn btn-default btn-flat">Users</button>
                         <button class="col-4 btn btn-default btn-flat">Profile</button>
